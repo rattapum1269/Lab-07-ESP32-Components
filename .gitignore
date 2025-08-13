@@ -1,26 +1,48 @@
-# สร้างไฟล์ .gitignore ใน lab7-2_Managed_url_Component
-cat > .gitignore << 'EOF'
-# ESP-IDF Build files
+# ESP-IDF Build Output
 build/
-sdkconfig
 sdkconfig.old
-sdkconfig.h
+dependencies.lock
 
-# IDE files
+# ESP-IDF Flash Encryption/Secure Boot Keys
+*.key
+*.pem
+
+# ESP-IDF Development Tools
 .vscode/
-.idea/
+.devcontainer/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE Files
 *.swp
 *.swo
 *~
+.idea/
 
-# OS files
-.DS_Store
-Thumbs.db
+# Build artifacts
+*.bin
+*.elf
+*.map
+*.hex
 
-# Managed Components (downloaded from GitHub)
-managed_components/
-dependencies.lock
-
-# Logs
+# Temporary files
+*.tmp
+*.temp
 *.log
+
+# ESP32 specific
+managed_components/
 EOF
