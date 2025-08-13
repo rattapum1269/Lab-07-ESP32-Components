@@ -55,6 +55,8 @@ lab7-3_esp32_Component/
 3. เขียน main application ที่เรียกใช้ทั้ง 2 components
 4. Build และทดสอบด้วย QEMU
 
+###ผลลัพท์
+
 ```c
 I (18446) LAB7-3: 📋 Reading #2
 I (18446) DISPLAY: 🧹 Display cleared
